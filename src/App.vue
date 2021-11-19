@@ -85,18 +85,22 @@ export default {
 
 <style>
 body{
+  --bg-color:#fff;
+  --text-color:#000;
   margin: 0;
 }
 #app {
+  background-color: var(--bg-color);
   display: flex;
   flex-direction: column;
   height:100vh;
   margin: 0;
-font-family: "Roboto";
+  font-family: "Roboto";
+  color:var(--text-color)
 }
 .darkMode{
-  background-color:#333;
-  color:#fff;
+  --bg-color:#333;
+  --text-color:#fff;
 }
 .container-input{
   width:300px;
@@ -123,7 +127,7 @@ h2{
 }
 .userInfo{
   width: 100%;
-  margin-bottom: 100px;
+  background-color:var(--bg-color)
 }
 .userInfo__content{
   display: flex;
@@ -143,7 +147,11 @@ h2{
   margin-left: 20px;
 }
 .userInfo__content a{
-  color: #333;
+  color: var(--text-color);
+}
+.footer{
+  background-color: var(--bg-color);
+color:var(--text-color);
 }
 .error{
   color: #f00;
