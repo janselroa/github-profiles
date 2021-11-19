@@ -150,6 +150,7 @@ h2{
   color: var(--text-color);
 }
 .footer{
+  padding-top:150px;
   background-color: var(--bg-color);
 color:var(--text-color);
 }
