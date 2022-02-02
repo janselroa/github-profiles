@@ -1,13 +1,15 @@
 <template>
   <div id="nav">
-    <router-link to="/" class="logo">Github Profiles</router-link>
+    <router-link to="/" class="logo">Github Profiles
+    <img src="@/assets/logo.png" alt="logo">
+    </router-link>
     <router-link to="/">Home</router-link>|
     <router-link to="/proyects">Featured projects</router-link>| 
     <router-link to="/about">About</router-link>
   </div>
   <router-view/>
   <footer class="footer">
-    <p>Application made by Jansel Roa with Vuejs💚</p>
+    <p>Application made by Jansel Roa with Vuejs💚 and the github <a href="https://docs.github.com/en/rest" target="_blank">api</a></p>
     <p><a href="https://github.com/janseroa/githubList" target="_blank">Repository of code</a></p>
   </footer>
 </template>
@@ -77,9 +79,16 @@ h1,h2  {
 }
 .logo{
   position: absolute;
-  top: 10px;
+  top: 5px;
   left: 10px;
   font-size:2rem;
-  font-weight:bold
+  font-weight:bold;
+  display:flex;
+  img{
+    display: inline-block;
+    width: 40px;
+    margin-left: 20px;
+    margin-top: -4px;
+  }
 }
 </style>
