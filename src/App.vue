@@ -1,19 +1,25 @@
 <template>
-  <div id="nav">
+<div class="top-barr">
+  <Navegation/>
     <router-link to="/" class="logo">Github Profiles
     <img src="@/assets/logo.png" alt="logo">
     </router-link>
-    <router-link to="/">Home</router-link>|
-    <router-link to="/proyects">Featured projects</router-link>| 
-    <router-link to="/about">About</router-link>
-  </div>
+</div>
   <router-view/>
   <footer class="footer">
     <p>Application made by Jansel Roa with Vuejs💚 and the github <a href="https://docs.github.com/en/rest" target="_blank">api</a></p>
     <p><a href="https://github.com/janseroa/githubList" target="_blank">Repository of code</a></p>
   </footer>
 </template>
-
+<script>
+import Navegation from "@/components/Navegation.vue"
+export default {
+  name:"App",
+  components:{
+    Navegation
+  }
+}
+</script>
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 /*base*/
@@ -30,19 +36,7 @@ body{
   overflow-x: hidden;
 }
 
-#nav {
-  padding: 20px;
-  text-align: center;
-  border-bottom: 1px solid #ddd;
-  a {
-    font-size:1.3rem;
-    margin: 10px;
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
 
 h1,h2  {
   text-align: center;
@@ -77,18 +71,25 @@ h1,h2  {
     width: 300px;
     margin: 10px;
 }
+.top-barr{
+  width: 100%;
+  background-color: #fff;
+  height: 50px;
+  padding-bottom:10px;
+  margin-bottom: 50px;
+  border-bottom: 1px solid #ddd;
+}
 .logo{
   position: absolute;
-  top: 5px;
+  top: 10px;
   left: 10px;
-  font-size:2rem;
+  font-size:1.7rem;
   font-weight:bold;
   display:flex;
   img{
     display: inline-block;
     width: 40px;
     margin-left: 20px;
-    margin-top: -4px;
   }
 }
 </style>
