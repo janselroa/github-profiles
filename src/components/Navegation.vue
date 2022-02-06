@@ -1,6 +1,6 @@
 <template>
     <nav class="nav" :class="{'menu-show':menuShow}">
-    <img  @click="menuShow=false" src="@/assets/close-icon.svg" alt="close icon">
+    <img class="close-icon"  @click="menuShow=false" src="@/assets/close-icon.svg" alt="close icon">
     <router-link @click="menuShow=false" class="link" to="/">Home</router-link>
     <router-link  @click="menuShow=false" class="link" to="/proyects">Featured projects</router-link>
     <router-link  @click="menuShow=false" class="link" to="/about">About</router-link>
@@ -16,7 +16,7 @@ export default {
     },
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .nav {
     width: 100%;
     position: absolute;
@@ -33,7 +33,7 @@ export default {
   }
 }
 img{
-    display: none
+    display: none;
 }
 @media screen and (max-width:700px){
     .nav{
